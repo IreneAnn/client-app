@@ -11,13 +11,13 @@ function App() {
   useEffect(()=>{
     axios.get('http://localhost:5000/api/activities')
     .then(response=>{
-      setActivities(response.data)
-    })
+      setActivities(response.data)      
+    })    
   },[])
   
   return (
     <div>
-<h1>Reactivites</h1>
+<h1>Reactivities</h1>
 <ul>
 {activities.map((activity:any)=>(
   <li key={activity.id}>{activity.title}</li>
